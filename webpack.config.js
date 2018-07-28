@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
   entry: __dirname + '/client/src/index.jsx',
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?/,
         include: '/client',
