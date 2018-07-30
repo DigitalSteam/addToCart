@@ -14,16 +14,16 @@ app.listen(port, () => {
 
 // below code is used initially to populate database with fake data (100 entries)
 
-const populateDb = () => {
-  for (let i = 0; i < 100; i += 1) {
-    db.insertData((err) => {
-      if (err) throw err;
-      console.log('Successfully inserted data!');
-    }, {
-      name: faker.lorem.words(),
-      price: faker.commerce.price(),
-    });
-  }
-};
+// const populateDb = () => {
+//   for (let i = 0; i < 100; i += 1) {
+//     db.insertData((err) => {
+//       if (err) throw err;
+//       console.log('Successfully inserted data!');
+//     }, {
+//       name: faker.lorem.words(),
+//       price: faker.commerce.price(),
+//     });
+//   }
+// };
 
-populateDb();
+// populateDb();
