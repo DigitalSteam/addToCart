@@ -1,0 +1,10 @@
+DROP DATABASE IF EXISTS steam_addToCart;
+CREATE DATABASE steam_addToCart;
+USE steam_addToCart;
+
+CREATE TABLE games (
+  ID INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  price INT, 
+  PRIMARY KEY (ID)
+);
