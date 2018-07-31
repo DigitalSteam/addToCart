@@ -15,13 +15,13 @@ app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
-app.get(`/api/games/:gameId`, (req, res) => {
+app.get('/api/games/:gameId', (req, res) => {
   db.getGameData(req.params.gameId, (err, data) => {
     if (err) throw err;
     // console.log('app.get:', data);
-    res.json(data);
+    res.json(data[0]);
   });
-})
+});
 
 // below code is used initially to populate database with fake data (100 entries)
 

@@ -5,8 +5,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      game: [],
-      currentGame: 1,
+      game: {},
     };
     // this.getGame = this.getGame(this.state.currentGame);
   }
@@ -19,9 +18,9 @@ class App extends React.Component {
     fetch(`/api/games/${gameId}`)
       .then(response => response.json())
       .then((results) => {
-        // console.log(results);
+        console.log(results);
         this.setState({
-          game: results.data,
+          game: results,
         });
       })
       .catch((err) => {
@@ -31,9 +30,20 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="block" id="buy">
-        <div className="block_header">
-         <div game={this.state.game} />
+      <div>
+        <div className="purchase_game_container">
+          <div className="purchase_game_area">
+            Buy {this.state.game.name}
+          </div>
+          <div className="purchase_platform"></div>
+        </div>
+        <div className="purchase_action_container">
+          <div className="purchase_price">
+            {this.state.game.price}
+          </div>
+          <div className="btn_addtocart">
+            Add to Cart
+          </div>
         </div>
       </div>
     );
