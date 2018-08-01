@@ -11,5 +11,4 @@ describe('Server test', () => {
     const response = await request(app).get('/api/games/1');
     expect(response.text).toBe('{\"name\":\"dolor deleniti iste\",\"price\":294}')
   });
-
 });

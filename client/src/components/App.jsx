@@ -11,7 +11,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    // this.getGame(1);
+    this.getGame(1);
   }
   
   getGame(gameId) {
