@@ -44,6 +44,7 @@
     "eslint-plugin-react": "^7.10.0",
     "faker": "^4.1.0",
     "jest": "^23.4.2",
+    "node-fetch": "^2.2.0",
     "puppeteer": "^1.6.1",
     "sinon": "^6.1.4",
     "sublime-linter": "^0.4.1",
