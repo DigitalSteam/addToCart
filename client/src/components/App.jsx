@@ -11,9 +11,9 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getGame(1);
+    // this.getGame(1);
   }
-
+  
   getGame(gameId) {
     fetch(`/api/games/${gameId}`)
       .then(response => response.json())
