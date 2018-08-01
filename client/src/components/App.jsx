@@ -1,4 +1,5 @@
 import React from 'react';
+import fetch from 'node-fetch';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,9 +14,9 @@ class App extends React.Component {
   componentDidMount() {
     this.getGame(1);
   }
-
+  
   getGame(gameId) {
-    fetch(`/api/games/${gameId}`)
+    fetch(`http://localhost:3002/api/games/${gameId}`)
       .then(response => response.json())
       .then((results) => {
         console.log(results);
