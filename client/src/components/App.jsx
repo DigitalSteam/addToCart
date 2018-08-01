@@ -19,7 +19,7 @@ class App extends React.Component {
     fetch(`http://localhost:3002/api/games/${gameId}`)
       .then(response => response.json())
       .then((results) => {
-        console.log(results);
+        // console.log(results);
         this.setState({
           game: results,
         });
