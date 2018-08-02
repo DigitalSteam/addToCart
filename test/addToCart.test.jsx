@@ -16,6 +16,7 @@ describe('<App />', () => {
     sinon.spy(App.prototype, 'componentDidMount');
     const wrapper = mount(<App />);
     expect(App.prototype.componentDidMount.calledOnce).toEqual(true);
+    wrapper.unmount();
   });
 
 });
