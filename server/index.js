@@ -11,14 +11,16 @@ app.use(express.static(__dirname + '/../client/dist'));
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: false }));
 
-app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
-});
+// app.get('/', (req, res) => {
+//   if (err) res.sendStatus(400);
+//   res.sendStatus(200);
+// });
 
 app.get('/api/games/:gameId', (req, res) => {
   db.getGameData(req.params.gameId, (err, data) => {
     if (err) throw err;
     // console.log('app.get:', data);
+    res.status(200);
     res.json(data[0]);
   });
 });
@@ -38,3 +40,10 @@ app.get('/api/games/:gameId', (req, res) => {
 // };
 
 // populateDb();
+if (process.env.NODE_ENV !== 'test') { 
+  app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});
+}
+
+module.exports = app;
