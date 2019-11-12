@@ -1,6 +1,6 @@
 # Project Name
 
-> Project description
+Add to cart feature for an online game purchasing platform similar to Steam 
 
 ## Related Projects
 
